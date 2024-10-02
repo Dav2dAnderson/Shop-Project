@@ -1,0 +1,17 @@
+<div id="fh5co-services" class="fh5co-bg-section">
+    <div class="container">
+        <div class="row">
+            {% for service in services %}
+            <div class="col-md-4 col-sm-4 text-center">
+                <div class="feature-center animate-box" data-animate-effect="fadeIn">
+                    <span class="icon">
+                        <img src="{{ service.image.url }}" style="width: 90px; height: 90px;">
+                    </span>
+                    <h3>{{ service.title }}</h3>
+                    <p>{{ service.description }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

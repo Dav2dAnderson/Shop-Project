@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+	
+{% block content %}
+
+	{% include 'components/_header.html' %}
+
+	<div id="fh5co-about">
+		<div class="container">
+			<div class="about-content">
+				<div class="row animate-box">
+					<div class="col-md-6">
+						<div class="desc">
+							<h3>Company History</h3>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quo est quis mollitia ratione magni assumenda repellat atque modi temporibus tempore ex. Dolore facilis ex sunt ea praesentium expedita numquam?</p> 
+							<p>Quos quia provident consequuntur culpa facere ratione maxime commodi voluptates id repellat velit eaque aspernatur expedita. Possimus itaque adipisci rem dolorem nesciunt perferendis quae amet deserunt eum labore quidem minima.</p>
+						</div>
+						<div class="desc">
+							<h3>Mission &amp; Vission</h3>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quo est quis mollitia ratione magni assumenda repellat atque modi temporibus tempore ex. Dolore facilis ex sunt ea praesentium expedita numquam?</p> 
+							<p>Quos quia provident consequuntur culpa facere ratione maxime commodi voluptates id repellat velit eaque aspernatur expedita. Possimus itaque adipisci rem dolorem nesciunt perferendis quae amet deserunt eum labore quidem minima.</p>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<img class="img-responsive" src="{{ last_product.image.url }}" alt="about">
+					</div>
+				</div>
+			</div>
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<h2>Bizning jamoa</h2>
+					<p>Bizning jamoyimiz azolari.</p>
+				</div>
+			</div>
+			<div class="row">
+				{% for mate in team %}
+				<div class="col-md-4 col-sm-4 animate-box" data-animate-effect="fadeIn">
+					<div class="fh5co-staff">
+						<img src="{{ mate.image.url }}" alt="Free HTML5 Templates by gettemplates.co">
+						<h3>{{ mate.fullname }}</h3>
+						<strong class="role">{{ mate.job }}</strong>
+						<p>{{ mate.bio }}</p>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+
+{% endblock %}
+

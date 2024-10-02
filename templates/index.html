@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}	
+	<aside id="fh5co-hero" class="js-fullheight">
+		<div class="flexslider js-fullheight">
+			<ul class="slides">
+		   	<li style="background-image: url({{last_product.image.url}});">
+		   		<div class="overlay-gradient"></div>
+		   		<div class="container">
+		   			<div class="col-md-6 col-md-offset-3 col-md-pull-3 js-fullheight slider-text">
+		   				<div class="slider-text-inner">
+		   					<div class="desc">
+		   						<span class="price">${{ last_product.price }}</span>
+		   						<h2>{{ last_product.title }}</h2>
+		   						<p>{{ last_product.description }}</p>
+			   					<p><a href="{% url 'single' last_product.slug %}" class="btn btn-primary btn-outline btn-lg">Purchase Now</a></p>
+		   					</div>
+		   				</div>
+		   			</div>
+		   		</div>
+		   	</li>
+		  	</ul>
+	  	</div>
+	</aside>
+
+	<!-- services -->
+	{% include 'components/_services.html' %}
+
+	<!-- products list -->
+	{% include 'components/_products_list.html' %}
+	
+
+
+	{% endblock content %}
+
+
+
